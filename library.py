@@ -66,3 +66,11 @@ def main():
 
 if _name_ == "_main_":
     main()
+try:
+    dosya = open("Book.txt", "a+")
+    # Dosya ile ilgili işlemleri burada yapabilirsiniz.
+    dosya.close()  # İşiniz bittiğinde dosyayı kapatmayı unutmayın.
+except FileNotFoundError:
+    print("Belirtilen dosya bulunamadı.")
+except Exception as e:
+    print("Bir hata oluştu:", e)
